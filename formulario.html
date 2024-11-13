@@ -9,23 +9,86 @@
     <meta name="description"
         content="Protegemos la salud de tu equipo con expertos en salud laboral, creando empresas más seguras y productivas.">
     <link rel="shortcut icon" href="./public/img/Logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
     <header id="conte_menu">
         <div id="menu">
-            <a href="#">
-                <img id="logo" src="./public/svg/360-ips.svg" alt="ir a la pagina de">
+            <a id="logo" href="">
+                <img src="./public/svg/360-ips.svg" alt="ir a la pagina de">
             </a>
             <ul id="nav-menu">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="/">Plataforma 360</a></li>
-                <li><a href="./servicios">servicios</a></li>
-                <li><a href="./contactos">contactos</a></li>
+                <li><a href="./index.html" aria-label="Ingresa al incio" title="Ingresa al incio">Inicio</a></li>
+                <li><a href="./plataforma360" aria-label="Ingresa a la plataforma 360"
+                        title="Ingresa a la plataforma 360">Plataforma 360</a></li>
+                <li><a href="./servicios" aria-label="Informate de nuestros servicios"
+                        title="Informate de nuestros servicios">servicios</a></li>
+                <li>
+                    <a href="./contactos" aria-label="Contactae con nosotros" title="Contactae con nosotros">
+                        contactos
+                    </a>
+                </li>
             </ul>
         </div>
 
     </header>
+
+
+    <main id="conte-form">
+
+        <h2>Inicia el registro con nosotros</h2>
+        <div id="separator">
+            <div class="formulario">
+                <form action="" method="get" id="">
+
+                    <label class="conte-input">
+                        <strong class="txt_space">Registra tu nombre completo</strong>
+                        <input class="input_space" type="text" required name="user-name" id="userName">
+                    </label>
+
+                    <label class="conte-input">
+                        <strong class="txt_space">Ingresa tu numero de celular</strong>
+                        <input class="input_space" type="number" required min="0" max="10" name="user-phone"
+                            id="userPhone">
+                    </label>
+
+                    <label class="conte-input">
+                        <strong class="txt_space"> Ingresa tu numero de cedula de ciudadania</strong>
+                        <input class="input_space" type="number" required name="user-phone" id="userPhone">
+                    </label>
+
+                    <label class="conte-input">
+                        <strong class="txt_space">Ingresa tu correo electronico</strong>
+                        <input class="input_space" type="email" required name="user-email" id="userEmail">
+                    </label>
+
+                    <label class="conte-input">
+                        <strong class="txt_space"> Ingresa el nombre de tu empresa (opcional)</strong>
+                        <input class="input_space" type="text" name="user-empire" id="userEmpire">
+                    </label>
+
+                    <label class="conte-input">
+                        <strong class="txt_space">Selecciona tu nivel escolar</strong>
+                        <select class="conte-input input_space" title="selecciona tu nivel escolar" name="level-school"
+                            id="level-School">
+                            <option value="">Seleccionar</option>
+                            <option value="primaria">Primaria</option>
+                            <option value="secundaria">Secundaria</option>
+                            <option value="bachiller">Bachiller</option>
+                            <option value="posgrado">Posgrado</option>
+                        </select>
+                    </label>
+
+                    <input class="input_submit btn-grad" type="submit" value="Enviar">
+
+                </form>
+            </div>
+            <div class="img"></div>
+        </div>
+
+    </main>
+
 </body>
 
 </html>
