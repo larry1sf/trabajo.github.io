@@ -230,8 +230,9 @@
         display: flex;
 
         .formulario {
-            background-color: var(--txt);
-            border: 1px solid #2c2c2c;
+            background-color: var(--bg);
+            color: var(--txt);
+            border: 1px solid var(--txt-dark);
             width: 50%;
             height: 70vh;
             margin: 2rem;
@@ -289,7 +290,7 @@
             width: 50%;
             height: 70vh;
             background: 100%/cover no-repeat url("../public/svg/fondo-registro.svg");
-            border: 1px solid #2c2c2c;
+            border: 1px solid var(--txt-dark);
             border-left: 0;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
