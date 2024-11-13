@@ -1,82 +1,162 @@
-:root{
-    --bg:#00b199;
-    --txt:#fff;
+:root {
+    --bg: #00b199;
+    --txt: #fff;
+    --txt-dark: #2c2c2c;
+
+    /* tamaños */
+    --h: 4rem;
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     list-style: none;
-    a{
-    text-decoration: none;
+
+    a {
+        text-decoration: none;
     }
 }
-#conte_menu{
-height: 6rem;
-display: flex;align-items: center;
-}
-#menu{
+
+#conte_menu {
+    height: 6rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 4rem;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     width: 100vw;
-    padding: 1rem;
-    #nav-menu{
-        justify-content: space-between;
+    padding: 1rem 1.3rem;
+
+    #logo {
+        width: calc(var(--h) + 3rem);
+        height: var(--h);
+        scale: 1.5;
+        margin: 0 45px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    #nav-menu {
         display: flex;
-        width: 30rem;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 30rem;
+        width: 100%;
         height: 100%;
         align-items: center;
 
-        li{
-            height:100%;
-            a{  position: relative;
+        li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            a {
+                position: relative;
                 display: flex;
+                height: 2rem;
                 align-items: center;
-                height:100%;
-                font: 500 1.3rem "Segoe UI";
-                color: #2c2c2c;
-                &::after{
+                font: 500 1.25rem "Segoe UI";
+                color: var(--txt-dark);
+
+                &::after {
                     position: absolute;
-                    content:"" ;
+                    content: "";
                     width: 0%;
                     height: 2px;
                     background-color: var(--bg);
-                    bottom: 0   ;
+                    bottom: 0;
                     transition: .15s ease;
                 }
-                &:hover{
+
+                &:hover {
                     color: var(--bg);
-                    &::after{
+
+                    &::after {
                         width: 100%;
                     }
                 }
             }
         }
     }
+
+    @media screen and (max-width:1000px) {
+        #nav-menu {
+            grid-area: 1/3;
+        }
+
+        @media screen and (max-width:740px) {
+            #nav-menu {
+                display: none;
+            }
+        }
+    }
 }
 
-#main{
+#main {
     position: relative;
     overflow: hidden;
-    height: 100%;
+    height: 89.9vh;
     width: 100%;
 }
 
-#main video{
- 
-    width: 100vw;
-    
-}.content{
-        position: absolute ;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-            display: flex;
-            /* padding:17rem; */
-            padding: 11rem;
-            color: #fff;
-            font:  700 1.2rem  "Segoe UI";
+#main video {
+
+    height: 100%;
+
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    color: #fff;
+
+
+    >h1 {
+        font: 700 1.8rem "Segoe UI";
+        height: auto;
+        padding: 0 8rem;
+        text-align: center;
     }
+
+    >a {
+        position: relative;
+        top: 4rem;
+        width: auto;
+        padding: .4rem 1.2rem;
+        color: var(--txt-dark);
+        border: 2px solid var(--txt);
+    }
+
+    #txt__bottom {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+
+        bottom: 1rem;
+        height: 10rem;
+        width: 100vw;
+        padding: 0 4rem;
+        margin-left: auto;
+        margin-right: auto;
+        background: #00b199;
+
+        h2 {
+            padding: 2rem;
+            font: 700 2.3rem "Segoe UI";
+        }
+    }
+}
