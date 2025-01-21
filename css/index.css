@@ -108,7 +108,7 @@
 
     video {
 
-       width:100%;
+        width: 100%;
 
     }
 }
@@ -171,7 +171,7 @@
 .btn-grad {
     position: relative;
     top: 3rem;
-    background-image: linear-gradient(to right, var(--bg-3) 0%, var(--bg-2) 51%, var(--bg) 100%);
+    background-image: linear-gradient(to top right, var(--bg-2) 30%, rgba(25, 73, 73, 0.836));
     margin: 10px;
     padding: 15px 45px;
     text-align: center;
@@ -230,14 +230,15 @@
         display: flex;
 
         .formulario {
-            background-color: var(--bg);
+            background: linear-gradient(to left top, var(--bg) 80%, var(--bg-3));
             color: var(--txt);
-            border: 1px solid var(--txt-dark);
+            border: 1px solid var(--bg-3);
             width: 50%;
             height: 70vh;
             margin: 2rem;
             margin-right: 0;
             padding: 2rem;
+            box-shadow: 0px 0px 20px 4px #2c2c2c5d;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
             border-right: 0;
@@ -259,25 +260,42 @@
                         display: flex;
                         align-items: center;
                         width: 20rem;
-                        font: 400 .98rem "Segoe UI";
+                        font: 400 1.18rem "Segoe UI";
                     }
 
                     .input_space {
-                        height: 1.6rem;
+                        height: 1.8rem;
                         width: 12rem;
+                        border-radius: 4px;
+                        outline: #119180;
+                        border-color: transparent;
+                        font: 400 .9rem "Segoe UI";
+                        margin-bottom: .2rem;
+
+                        &:focus {
+                            outline: 2px solid #105c52;
+                        }
+                    }
+
+                    option:hover {
+                        background: #105c52 !important;
                     }
                 }
 
+
+
                 .input_submit {
                     display: flex;
-                    height: 1.6rem;
+                    /* height: 1.6rem; */
                     top: 0;
-                    padding: 0;
+                    padding: .45rem .60rem;
                     margin: 0 auto;
                     width: 50%;
-                    border: 2px solid transparent;
-                    box-shadow: 0 0 5px var(--bg);
+                    border: 0px solid transparent;
+                    box-shadow: 0 0 5px var(--txt-dark);
                     cursor: pointer;
+                    font: 500 1.09rem "Segoe UI";
+                    border-radius: 3px;
                 }
             }
         }
@@ -290,13 +308,12 @@
             width: 50%;
             height: 70vh;
             background: 100%/cover no-repeat url("../public/svg/fondo-registro.svg");
-            border: 1px solid var(--txt-dark);
+            border: 1px solid var(--bg-3);
             border-left: 0;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
+            box-shadow: 0px 0px 20px 4px #2c2c2c5d;
         }
-
-        /* margin:0rem 1rem; */
 
     }
 
